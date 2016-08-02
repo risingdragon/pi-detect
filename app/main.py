@@ -18,11 +18,12 @@ pictureDir = Util.basedir() + '/' + Config.get('picture-dir')
 detectedPicrure = pictureDir + '/lastsnap.jpg'
 
 lastmodified = 0
-for i in range(0, 9):
+for i in range(0, 15):
 	if os.path.exists(detectedPicrure):
 		stat = os.stat(detectedPicrure)
 		if int(stat.st_mtime) >= int(now):
 			lastmodified = stat.st_mtime
+			break
 	time.sleep(1)
 
 if lastmodified == 0:
