@@ -1,0 +1,6 @@
+/config.json
+/motion
+/motion.conf
+/log/*
+/pic/*
+__pycache__/
