@@ -15,10 +15,10 @@ from core.config import Config
 now = datetime.now().strftime('%s')
 pictureDir = Util.basedir() + '/' + Config.get('picture-dir')
 
-detectedPicrure = pictureDir + '/lastsnap.jpg'
+detectedPicrure = pictureDir + '/preview.jpg'
 
 lastmodified = 0
-for i in range(0, 15):
+for i in range(0, 30):
 	if os.path.exists(detectedPicrure):
 		stat = os.stat(detectedPicrure)
 		if int(stat.st_mtime) >= int(now):
